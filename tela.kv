@@ -1,0 +1,107 @@
+<MyLayout>:
+    name : 'main'
+
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'fundo.jpg'
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        Label:
+            text: 'Papelaria Nota 10'
+            color: (48/255, 84/255, 150/255, 1)
+            font_size: '50dp'
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.10, 2.00)
+
+        Image:
+            source: 'caneta.jpg'
+            size_hint_y: None
+            size_hint: (0.2, 0.90)
+        Label:
+            text:'CANETA'
+            color: '0B3BC0'
+            size_hint: (0.2, 0.20)
+        Label:
+            text: 'Valor UND.:R$ 2,50'
+            color: '0B3BC0'
+            size_hint: (0.2, 0.20)
+        Button:
+            text: 'comprar'
+            color: 'white'
+            size_hint: (0.2, 0.4)
+            font_size: '18 dp'
+            background_color: "1EFF1E"
+
+        Image:
+            source: 'caderno.jpg'
+            size_hint_y: None
+            size_hint: (0.2, 0.90)
+            pos_hint: {'center_x': 0.5}
+        Label:
+            text:'CADERNO'
+            color: '0B3BC0'
+            size_hint: (0.2, 0.20)
+            pos_hint: {'center_x': 0.5}
+        Label:
+            text: 'Valor UND.:R$ 25,00'
+            color: '0B3BC0'
+            size_hint: (0.2, 0.20)
+            pos_hint: {'center_x': 0.5}
+        Button:
+            text: 'comprar'
+            color: 'white'
+            size_hint: (0.2, 0.4)
+            font_size: '18 dp'
+            background_color: "1EFF1E"
+            pos_hint: {'center_x': 0.5}
+
+        Image:
+            source: 'bolsa.jpg'
+            size_hint_y: None
+            size_hint: (5.2, 5.90)
+            pos_hint: {'center_y': 1.9}
+            size_hint: (1.9, 1.5)
+        Label:
+            text:'BOLSA'
+            color: '0B3BC0'
+            size_hint: (5.2, 5.90)
+            pos_hint: {'center_y': 0.5}
+            size_hint: (1.9, 0.5)
+        Label:
+            text: 'Valor UND.:R$ 120,00'
+            color: '0B3BC0'
+            size_hint: (5.2, 5.90)
+            pos_hint: {'center_y': 0.5}
+            size_hint: (1.9, 0.3)
+        Button:
+            text: 'comprar'
+            color: 'white'
+            size_hint: (0.2, 0.4)
+            font_size: '18 dp'
+            background_color: "1EFF1E"
+            pos_hint: {'center_x': 0.9}
+
+        redondoButton:
+            text: "Seguir para o Carrinho"
+            pos_hint: {'center_x': 0.5}
+            size_hint: (0.7, 0.6)
+<redondoButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    font_size: '20dp'
+    canvas.before:
+        Color:
+            rgba: (48/255, 84/255, 150/255, 1)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [20]
+
+
+<ThemeMenu> :
+    name : 'theme'
+
